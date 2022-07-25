@@ -1,34 +1,69 @@
 <!doctype html>
 <html>
 <head>
-    <title>삼다씨디에프앤비 영농조합법인</title>
+    <title>삼다씨디에프앤비 영농조합법인</title>  
     <meta charset="utf-8">
+    <script>
+    function LinksSetColor(color){
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+        alist[i].style.color = color;
+        i = i + 1;
+        }
+    }
+    function BodySetColor(color){
+        document.querySelector('body').style.color=color;
+    }
+    function BodySetBackgroundColor(color){
+        document.querySelector('body').style.backgroundColor=color;
+    }
+    function NightDayHandler(self){
+        var modebody =  document.querySelector('body');
+    if(self.value === '야간모드'){
+        Body.setBackgroundColor('black')
+        Body.setColor('white');
+        self.value = '주간모드'
+        Links.setColor('red');
+    } else {
+        Body.setBackgroundColor('white')
+        Body.setColor('black');
+        self.value = '야간모드'
+
+        Links.setColor('blue');
+    }
+        }
+    </script>
 </head>
 
 <body>
-    <h1><img src="자연.jpg" width="250"><a href="index.html">삼다CDF&B</a></h1>
+    <h1><img src="자연.jpg" width="250"><a href="index.html">삼다CDF&B</a></h1> 
     <ol>
         <Li><a href="소개.html">삼다CDF&B 소개</a></Li>
         <Li><a href="제품.html">제품소개</a></Li>
         <Li><a href="고객지원.html">고객지원센터</a></Li>
     </ol>
     <h2>오리보첩, 오동통닭</h2>
+    
     <p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MPP2Q9JBvbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MPP2Q9JBvbg" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
-    <strong><p>오리,닭 전문업체 <a href="https://map.naver.com/v5/entry/place/152037106?c=14102071.8047968,3966954.3571740,13,0,0,0,dh&placePath=%2Fhome%3Fentry=plt" target="_blank", title="삼다정보">삼다씨디에프앤비</a></p></strong>
+    <strong><p>오리,닭 전문업체 <a href="https://map.naver.com/v5/entry/place/152037106?c=14102071.8047968,3966954.3571740,13,0,0,0,dh&placePath=%2Fhome%3Fentry=plt" 
+        target="_blank", title="삼다정보">삼다씨디에프앤비</a></p></strong>
     <img src="duckf food.jpg", width="400">
     <p>
         <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/62a545177b967b1179940fa0/1g5apbp06';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+        s1.async=true;
+        s1.src='https://embed.tawk.to/62a545177b967b1179940fa0/1g5apbp06';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
     })();
     </script>
     <!--End of Tawk.to Script-->
@@ -53,4 +88,8 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
 </body>
+    <input id="night_day" type="button" value="야간모드" onclick="
+    NightDayHandler(this);
+    ">
+    
 </html>
